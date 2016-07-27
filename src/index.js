@@ -44,7 +44,7 @@ import './styles/sass/themes/bootstrap.scss';
 
 
 // Use Shell or Doc. Mgmt. credentials.
-const useShellCredentials = false;
+let useShellCredentials = false;
 
 // Get host(it will get hostname and port no also if available).
 const windowLocation = document.location.host;
@@ -62,7 +62,8 @@ switch (windowLocation) {
 case 'localhost:2015':
 case 'cosmos.pmapconnect.com':
   hardCodedCredentials = true;
-  apiUrl = useShellCredentials ? 'https://devind.pmapconnect.com:338' : 'https://devind.pmapconnect.com:558';
+  useShellCredentials = true;
+  apiUrl = useShellCredentials ? 'https://devind.pmapconnect.com:228' : 'https://devind.pmapconnect.com:558';
   // apiUrl = 'https://devsvc.pmapconnect.com';
 
   // Set Rest Service Host Api Url.
@@ -97,7 +98,7 @@ store.dispatch(setSelectedMenuItem({
 }));
 
 // Set (dev) url prefix.
-store.dispatch(setUrlPrefix( hardCodedCredentials ? 'http://productfacelift.pmapconnect.com' : '' ));
+store.dispatch(setUrlPrefix( hardCodedCredentials ? 'http://192.168.5.50:2222' : '' ));
 
 // Init global session activity to true.
 store.dispatch(setSessionIsActive(true));
@@ -115,8 +116,8 @@ if (hardCodedCredentials) {
   store.dispatch(setSSOType(1));
 
   if (useShellCredentials) {
-    store.dispatch(setConsumerId(3646));
-    store.dispatch(setLocationId(1000));
+    store.dispatch(setConsumerId(3653));
+    store.dispatch(setLocationId(8810));
     store.dispatch(fetchAuth('demouser', 'Passw1rd', '0'))
     .catch(error => {
       console.log('shell error: check fetchAuth method on index.js', error);
