@@ -1,0 +1,145 @@
+{
+  "fileManager" : [
+    {
+      "id" : "1",
+      "type" : "folder",
+      "name" : "root",
+      "path" : "/",
+      "children" : [
+        {
+          "id" : "11",
+          "type" : "folder",
+          "name" : "EHS",
+          "path" : "/EHS",
+          "children" : [
+            {
+              "id" : "111",
+              "type" : "folder",
+              "name" : "Policies",
+              "path" : "/EHS/Policies",
+              "children" : [
+                {
+                  "id" : "1111",
+                  "type" : "folder",
+                  "name" : "Sample Folder",
+                  "path" : "/EHS/Policies/Sample Folder"
+                },
+                {
+                  "id" : "55",
+                  "type" : "word",
+                  "name" : "Stanley Nurek INCIDENT INVESTIGATION REPORT 080614(1).doc",
+                  "path" : "/EHS/Policies/Stanley Nurek INCIDENT INVESTIGATION REPORT 080614(1).doc",
+                  "doc_version": "1",
+                  "doc_modified_date": "10/7/2014",
+                  "doc_status_name": "Final"
+                },
+                {
+                  "id" : "1113",
+                  "type" : "pdf",
+                  "name" : "PDF file sample.pdf",
+                  "path" : "/EHS/Policies/PDF file sample.pdf"
+                }
+              ]
+            },
+            {
+              "id" : "112",
+              "type" : "folder",
+              "name" : "Procedures",
+              "path" : "/EHS/Procedures"
+            },
+            {
+              "id" : "113",
+              "type" : "folder",
+              "name" : "Work Instructions",
+              "path" : "/EHS/Work Instructions"
+            },
+            {
+              "id" : "114",
+              "type" : "folder",
+              "name" : "Forms, Checklist and Documents",
+              "path" : "/EHS/Forms, Checklist and Documents"
+            },
+            {
+              "id" : "115",
+              "type" : "folder",
+              "name" : "EHS Obsolete",
+              "path" : "/EHS/EHS Obsolete"
+            }
+          ]
+        },
+        {
+          "id" : "21",
+          "type" : "folder",
+          "name" : "Test",
+          "path" : "/Test",
+          "children" : [
+            {
+              "id" : "211",
+              "type" : "folder",
+              "name" : "Policies",
+              "path" : "/Test/Policies",
+              "children" : [
+                {
+                  "id" : "2111",
+                  "type" : "folder",
+                  "name" : "Sample Folder",
+                  "path" : "/Test/Policies/Sample Folder"
+                },
+                {
+                  "id" : "2112",
+                  "type" : "word",
+                  "name" : "Word file sample.doc",
+                  "path" : "/Test/Policies/Word file sample.doc"
+                },
+                {
+                  "id" : "2113",
+                  "type" : "pdf",
+                  "name" : "PDF file sample.pdf",
+                  "path" : "/Test/Policies/PDF file sample.pdf"
+                }
+              ]
+            },
+            {
+              "id" : "212",
+              "type" : "folder",
+              "name" : "Procedures",
+              "path" : "/Test/Procedures"
+            },
+            {
+              "id" : "213",
+              "type" : "folder",
+              "name" : "Work Instructions",
+              "path" : "/Test/Work Instructions"
+            },
+            {
+              "id" : "214",
+              "type" : "folder",
+              "name" : "Forms, Checklist and Documents",
+              "path" : "/Test/Forms, Checklist and Documents"
+            },
+            {
+              "id" : "215",
+              "type" : "folder",
+              "name" : "EHS Obsolete",
+              "path" : "/Test/EHS Obsolete"
+            }
+          ]
+        },
+        {
+          "id" : "31",
+          "type" : "folder",
+          "name" : "Uploads",
+          "path" : "/Uploads",
+          "children" : [
+            {
+              "id" : "311",
+              "type" : "word",
+              "name" : "Word file sample.doc",
+              "path" : "/Uploads/Word file sample.doc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

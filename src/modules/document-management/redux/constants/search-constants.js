@@ -1,0 +1,4 @@
+// Action types.
+export const DM_SET_SEARCH_QUERY = 'DM_SET_SEARCH_QUERY';
+export const DM_SET_SEARCH_CRITERIA = 'DM_SET_SEARCH_CRITERIA';
+export const DM_SET_SEARCH_OBJECT = 'DM_SET_SEARCH_OBJECT';

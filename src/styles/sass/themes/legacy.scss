@@ -1,0 +1,96 @@
+/*
+ *
+ *   LEGACY: ProcessMAP Theme System
+ *   version 1.0.0
+ *
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+
+// Font
+$font-stack: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-size: 14px !default;
+$body-bg: #F3F3F4 !default;
+$text-color: #676A6C !default;
+
+// Basic Colors
+$default-color: #CCCCCC !default;
+$primary-color: #337AB7 !default;
+$info-color: #1CC09F !default;
+$success-color: #5CB85C !default;
+$warning-color: #F0AD4E !default;
+$danger-color: #D9534F !default;
+
+// Hover Colors
+$row-hover: #FFFFFF !default;
+
+// Various colors
+$gray-color: #F3F3F4 !default;
+$light-gray: #FAFAFA !default;
+$label-badget-color: #5E5E5E !default;
+
+// Border Color
+$border-color: #E7E7E7 !default;
+
+//Border radius for buttons
+$btn-border-radius: 3px !default;
+
+//Navigation
+$left-nav-bg: #2F4050 !default;
+$top-nav-bg: rgb(16,114,189) !default;
+$top-nav-text-color-active: #FFFFFF !default;
+$top-nav-text-color: rgba($top-nav-text-color-active, .8) !default;
+
+// Workflow Avatar Status Colors
+// $default-avatar: #EEEEEE !default;
+$approved-color: #3DB535 !default;
+$pending-color: #FBDB0C !default;
+$rejected-color: #D1111A !default;
+
+
+// Avatar colors options.
+$avatar-color-1: #B39DDB !default;
+$avatar-color-2: #9FA8DA !default;
+$avatar-color-3: #BCAAA4 !default;
+$avatar-color-4: #80DEEA !default;
+$avatar-color-5: #FFECB3 !default;
+$avatar-color-6: #FFE082 !default;
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+   GENERAL
+---------------------------------------------------
+------------------------------------------------ */
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@media(max-width: 767px){
+  body{
+    padding-top: 60px;
+  }
+}
+
+html,body{
+  height: 100%;
+}
+*:focus{
+  outline: 0 !important;
+}
+
+// Icons.
+@import "../../css/odyssey-icons.css";
+
+.legacy{
+  &.body-theme{
+    font-family: $font-stack;
+    font-size: $font-size;
+    color: $text-color;
+    overflow-x: hidden;
+    padding-top: 100px;
+    background-color: $body-bg;
+  }
+  // App style.
+  @import "../app";
+}

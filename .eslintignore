@@ -1,0 +1,6 @@
+build/**
+node_modules/**
+karma.conf.js
+doc/**
+
+src/static/js/**

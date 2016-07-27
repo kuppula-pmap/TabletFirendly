@@ -1,0 +1,21 @@
+test:
+  post:
+    - npm run build
+
+machine:
+  node:
+    version: 5.11.0
+  environment:
+    NODE_ENV: production
+
+deployment:
+  push_to_cosmos:
+    branch: master
+    commands:
+      - ssh -v staginguser1@64.135.103.141 'cd /home/staginguser1/cosmos/ && rm -r build'
+      - rsync -rltzuv build staginguser1@64.135.103.141:/home/staginguser1/cosmos/
+      - rsync -rltzuv -e 'ssh -p 2222' --exclude=node_modules * circleci@64.80.139.212:/Library/Server/Web/Data/Sites/cosmos/
+      - rsync -rltzuv -e 'ssh -p 2222' .babelrc circleci@64.80.139.212:/Library/Server/Web/Data/Sites/cosmos/
+      - ssh -v -p 2222 circleci@64.80.139.212 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && npm install && npm run build:prod && rm -r /Library/Server/Web/Data/Sites/cosmos/src && cp /Library/Server/Web/Data/sites/cosmos/htaccess_cosmos /Library/Server/Web/Data/Sites/cosmos/build/.htaccess'
+#      - rsync -rltzuv --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
+#      - rsync -rltzuv .babelrc circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/

@@ -1,0 +1,235 @@
+/*
+ *
+ * Odyssey 1.0.0
+ *
+ */
+
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'Odyssey Icons';
+  src: url('./fonts/Odyssey-Icons.eot?v=4.5.0');
+  src: url('./fonts/Odyssey-Icons.eot?#iefix&v=4.5.0') format('embedded-opentype'),
+       url('./fonts/Odyssey-Icons.woff?v=4.5.0') format('woff'),
+       url('./fonts/Odyssey-Icons.ttf?v=4.5.0') format('truetype'),
+       url('./fonts/Odyssey-Icons.svg?v=4.5.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.oi {
+  display: inline-block;
+  font: normal normal normal 14px/1 "Odyssey Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+.oi-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.oi-2x {
+  font-size: 2em;
+}
+.oi-3x {
+  font-size: 3em;
+}
+.oi-4x {
+  font-size: 4em;
+}
+.oi-5x {
+  font-size: 5em;
+}
+.oi-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.oi-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.oi-ul > li {
+  position: relative;
+}
+.oi-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.oi-li.oi-lg {
+  left: -1.85714286em;
+}
+.oi-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #AAAAAA;
+  border-radius: .1em;
+}
+.oi-pull-left {
+  float: left;
+}
+.oi-pull-right {
+  float: right;
+}
+.oi.oi-pull-left {
+  margin-right: .3em;
+}
+.oi.oi-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.oi.pull-left {
+  margin-right: .3em;
+}
+.oi.pull-right {
+  margin-left: .3em;
+}
+.oi-spin {
+  -webkit-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+}
+.oi-pulse {
+  -webkit-animation: fa-spin 1.5s infinite steps(8);
+  animation: fa-spin 1.5s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.oi-rotate-neg-45 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.oi-rotate-45 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.oi-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.oi-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.oi-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.oi-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.oi-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .oi-rotate-90,
+:root .oi-rotate-180,
+:root .oi-rotate-270,
+:root .oi-flip-horizontal,
+:root .oi-flip-vertical {
+  filter: none;
+}
+.oi-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.oi-stack-1x,
+.oi-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.oi-stack-1x {
+  line-height: inherit;
+}
+.oi-stack-2x {
+  font-size: 2em;
+}
+.oi-inverse {
+  color: #ffffff;
+}
+
+
+/* FONT CLASSES
+* -------------------------- */
+.oi-bars:before { content: "\e906"; }
+.oi-alarm-o:before { content: "\e900"; }
+.oi-arrow-down-o:before { content: "\e901"; }
+.oi-arrow-left-o:before { content: "\e902"; }
+.oi-arrow-right-o:before { content: "\e903"; }
+.oi-arrow-up-o:before { content: "\e904"; }
+.oi-bar-chart-o:before { content: "\e905"; }
+.oi-book-view-o:before { content: "\e907"; }
+.oi-bookmark-o:before { content: "\e908"; }
+.oi-calendar-o:before { content: "\e909"; }
+.oi-clipboard-o:before { content: "\e90a"; }
+.oi-close-o:before { content: "\e90b"; }
+.oi-cog-o:before { content: "\e90c"; }
+.oi-desktop-o:before { content: "\e90d"; }
+.oi-envelopes-o:before { content: "\e90e"; }
+.oi-flowchart-o:before { content: "\e90f"; }
+.oi-folder-o:before { content: "\e910"; }
+.oi-funnel-o:before { content: "\e911"; }
+.oi-help-circle-o:before { content: "\e912"; }
+.oi-home-o:before { content: "\e913"; }
+.oi-home-pin-o:before { content: "\e914"; }
+.oi-information-circle-o:before { content: "\e915"; }
+.oi-logout-o:before { content: "\e916"; }
+.oi-map-marker-o:before { content: "\e917"; }
+.oi-paint-palette-o:before { content: "\e918"; }
+.oi-pie-chart-o:before { content: "\e919"; }
+.oi-pin-o:before { content: "\e91a"; }
+.oi-pin:before { content: "\e921"; }
+.oi-report-problem-circle-o:before { content: "\e91b"; }
+.oi-report-problem-diamond-o:before { content: "\e91c"; }
+.oi-report-problem-triangle-o:before { content: "\e91d"; }
+.oi-search-o:before { content: "\e91e"; }
+.oi-window-application-o:before { content: "\e91f"; }
+.oi-window-module-o:before { content: "\e920"; }

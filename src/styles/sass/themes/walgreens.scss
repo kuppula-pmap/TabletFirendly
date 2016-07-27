@@ -1,0 +1,131 @@
+/*
+ *
+ *   ANDROMEDA: ProcessMAP Theme System
+ *   version 1.0.0
+ *
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+
+// Font
+$font-stack: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-size: 14px !default;
+$body-bg: #F3F3F4 !default;
+$text-color: #545454 !default;
+
+// Basic Colors
+$default-color: #CCCCCC;   // Default color
+$primary-color: #439BD6;   // Primary color
+$info-color: #1576B6;      // Info color
+$success-color: #5CB85C;   // Success color
+$warning-color: #F0AD4E;   // Warrning color
+$danger-color: #E61031;    // Danger color
+
+
+// Workflow Avatar Status Colors
+// $default-avatar: #EEEEEE !default;
+$approved-color: #3DB535 !default;
+$pending-color: #FBDB0C !default;
+$rejected-color: #D1111A !default;
+
+// Avatar colors options.
+$avatar-color-1: #B39DDB !default;
+$avatar-color-2: #9FA8DA !default;
+$avatar-color-3: #BCAAA4 !default;
+$avatar-color-4: #80DEEA !default;
+$avatar-color-5: #FFECB3 !default;
+$avatar-color-6: #FFE082 !default;
+
+// Hover Colors
+$row-hover: #FFFFFF !default;
+
+// Various colors
+$gray-color: #F3F3F4 !default;
+$light-gray: #FAFAFA !default;
+$label-badget-color: #5E5E5E !default;
+
+// Border Color
+$border-color: #E7E7E7 !default;
+
+// Border radius for buttons
+$btn-border-radius: 3px !default;
+
+// Top Navigation
+$top-nav-bg: #5499D4 !default;
+$top-nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !default;
+$top-nav-text-color-active: #FFFFFF !default;
+$top-nav-text-color-hover: $top-nav-text-color-active !default;
+$top-nav-text-color: rgba($top-nav-text-color-active, .7) !default;
+$top-nav-hamburger-color-active: $info-color !default;
+
+// Left Navigation
+$left-nav-bg: #2F4050 !default;
+$left-nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !default;
+$left-nav-avatar-bg: $info-color !default;
+$left-nav-avatar-text: #FFFFFF !default;
+
+$left-nav-label-color: #FFFFFF !default;
+$left-nav-label-bg-color: $info-color !default;
+
+$left-nav-text-color-active: $info-color !default;
+$left-nav-text-color-hover: #FFFFFF !default;
+$left-nav-text-color: rgba($left-nav-text-color-hover, .7) !default;
+
+// Navigator
+$navigator-bg: lighten($left-nav-bg, 8%) !default;
+$navigator-link-color-hover: #FFFFFF!default;
+$navigator-link-color: rgba($navigator-link-color-hover, .7) !default;
+$navigator-link-color-active: $info-color !default;
+
+$navigator-button-color: #FFFFFF !default;
+$navigator-button-color-active: #FFFFFF !default;
+
+$navigator-input-color: #FFFFFF !default;
+$navigator-input-focus: #FFFFFF !default;
+
+// Masonry
+$masonry-link-bg: #F3F3F4;
+$masonry-link-bg-hover: darken($masonry-link-bg, 10%);
+
+
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+   GENERAL
+---------------------------------------------------
+------------------------------------------------ */
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@media(max-width: 767px){
+  body{
+    padding-top: 60px;
+  }
+}
+
+html,body{
+  height: 100%;
+}
+*:focus{
+  outline: 0 !important;
+}
+
+// Icons.
+@import "../../css/odyssey-icons.css";
+
+.andromeda{
+  &.body-theme{
+    font-family: $font-stack;
+    font-size: $font-size;
+    color: $text-color;
+    overflow-x: hidden;
+    padding-top: 100px;
+    background-color: $body-bg;
+  }
+
+  // App style.
+  @import "../app";
+}
