@@ -18,7 +18,7 @@ import { setReloadIframe } from '../../../modules/shell/redux/actions/ui-actions
 import { fetchBreadcrumbs } from '../../../modules/shell/redux/actions/breadcrumbs-actions';
 
 // Utility methods.
-import utils from '../../../utils';
+// import utils from '../../../utils';
 
 class divPage extends React.Component {
   constructor(props) {
