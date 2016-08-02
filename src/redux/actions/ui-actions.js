@@ -28,13 +28,13 @@ function getDirtyObject() {
   iframe = iframe ? iframe[0] : null;
   if (iframe != null) {
     let innerDoc = iframe.contentWindow;
-
-    // If any fancy boxes are opened then it will go in to the below while loop
-    while (innerDoc !== undefined && innerDoc.document.getElementById('fancybox-frame') !== null && innerDoc.document.getElementById('fancybox-frame') !== undefined) {
-      // This loop checks the current fancy box.
-      innerDoc = innerDoc.document.getElementById('fancybox-frame').contentWindow;
-    }
-
+    try {
+      // If any fancy boxes are opened then it will go in to the below while loop
+      while (innerDoc !== undefined && innerDoc.document.getElementById('fancybox-frame') !== null && innerDoc.document.getElementById('fancybox-frame') !== undefined) {
+        // This loop checks the current fancy box.
+        innerDoc = innerDoc.document.getElementById('fancybox-frame').contentWindow;
+      }
+    } catch (exp) { console.log('Exception with inner frame'); return null; }
     if (innerDoc !== undefined && innerDoc.isDirty === true) {
       // _isCurrentPageDirty = true;
       dirtyObj = innerDoc;
