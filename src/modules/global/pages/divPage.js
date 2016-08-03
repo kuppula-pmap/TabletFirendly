@@ -222,15 +222,24 @@ class divPage extends React.Component {
       const styles = {
         iframe: {
           position: 'absolute',
-          top: 0,
-          left: 0,
+          top: 100,
+          left: 60,
           width: shUi.isNavigatorPinned && globalSettings.selectedMenuItem.IsNavigatorDisplay ? 'calc(100% - 274px)' : '100%',
           height: shUi.browserInfo.height - 100,
           border: 1,
           transition: 'all .5s ease',
           borderColor: 'red',
-          borderStyle: 'dotted',
-          overflow: 'scroll'
+          borderStyle: 'double'
+        },
+        divScroll: {
+          position: 'fixed',
+          right: 0,
+          bottom: 0,
+          left: 0,
+          top: 0,
+          WebkitOverflowScrolling: 'touch',
+          overflow: 'scroll',
+          backgroundColor: 'yellow'
         }
       };
 
@@ -242,8 +251,8 @@ class divPage extends React.Component {
           {isLoading ?
             <Loader theme="dark" />
           :
-            <div id="divDivPage">
-              <object id="objDivPage" type="text/html" data={url} scrolling="yes" className="iframeWrapper home" style={styles.iframe} ></object>
+            <div id="divDivPage" style={styles.divScroll}>
+              <object id="objDivPage" type="text/html" data={url} scrolling="yes" className="iframeWrapper home" style={styles.iframe}></object>
             </div>
           }
         </Main>
