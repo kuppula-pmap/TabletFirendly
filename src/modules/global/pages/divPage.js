@@ -238,8 +238,7 @@ class divPage extends React.Component {
           left: 0,
           top: 0,
           WebkitOverflowScrolling: 'touch',
-          overflow: 'scroll',
-          backgroundColor: 'yellow'
+          overflow: 'scroll'
         }
       };
 
