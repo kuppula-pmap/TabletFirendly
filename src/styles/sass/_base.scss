@@ -157,11 +157,12 @@ mark{
 }
 @media (max-width: 768px) {
   .dropdown-menu{
-    position: fixed;
+    position: absolute;;
     top: auto;
-    left: 0;
+    left: auto;
     width: 98%;
     margin: 0 1%;
+    width: auto;
   }
 }
 
