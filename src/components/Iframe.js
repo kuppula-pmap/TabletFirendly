@@ -8,6 +8,7 @@ class Iframe extends React.Component {
   // Render method.
   render() {
     const { shUi, globalSettings, url } = this.props;
+    const _isiPad = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/);
     const iframewidth = screen.width > 768 ? '100%' : shUi.browserInfo.width - 50;
 
     const styles = {
@@ -23,7 +24,7 @@ class Iframe extends React.Component {
     };
 
     return (
-        <iframe id="iframeComponent" src={url} scrolling={ screen.width > 768 ? 'yes' : 'no' } className="iframeWrapper home" style={styles.iframe} />
+        <iframe id="iframeComponent" src={url} scrolling={ _isiPad ? 'no' : 'yes' } className="iframeWrapper home" style={styles.iframe} />
     );
   }
 }
