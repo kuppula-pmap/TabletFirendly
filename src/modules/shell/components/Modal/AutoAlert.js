@@ -113,7 +113,7 @@ class AutoAlert extends React.Component {
     const lblLeave = shModuleLabelsItems ? shModuleLabelsItems.lblLeave : null;
     const lblUnSavedChanges = shModuleLabelsItems ? shModuleLabelsItems.lblUnSavedChanges : null;
     return (
-      <Modal bsSize="sm" show={globalUi.isModalOpen} onHide={this.handleStay.bind(this)}>
+      <Modal show={globalUi.isModalOpen} onHide={this.handleStay.bind(this)}>
 
         <Modal.Header closeButton>
           <Modal.Title>{lblConfirm}</Modal.Title>
