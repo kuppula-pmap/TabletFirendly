@@ -8,8 +8,8 @@ class Iframe extends React.Component {
   // Render method.
   render() {
     const { shUi, globalSettings, url } = this.props;
-    const _isiPad = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/);
-    const iframewidth = screen.width > 768 ? '100%' : shUi.browserInfo.width - 50;
+    const isiPad = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/);
+    const iframewidth = isiPad ? shUi.browserInfo.width - 50 : '100%';
 
     const styles = {
       iframe: {
@@ -17,14 +17,14 @@ class Iframe extends React.Component {
         top: 0,
         left: 0,
         width: shUi.isNavigatorPinned && globalSettings.selectedMenuItem.IsNavigatorDisplay ? 'calc(100% - 274px)' : iframewidth,
-        height: shUi.browserInfo.height - 100,
+      //  height: shUi.browserInfo.height - 100,
         border: 0,
         transition: 'all .5s ease',
       }
     };
 
     return (
-        <iframe id="iframeComponent" src={url} scrolling={ _isiPad ? 'no' : 'yes' } className="iframeWrapper home" style={styles.iframe} />
+        <iframe id="iframeComponent" src={url} scrolling={ isiPad ? 'no' : 'yes' } className="iframeWrapper home" style={styles.iframe} />
     );
   }
 }

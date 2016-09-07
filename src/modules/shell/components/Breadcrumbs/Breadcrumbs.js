@@ -16,7 +16,7 @@ class Breadcrumbs extends React.Component {
     let breadcrumb = [];
 
     // Check for desktop width.
-    if (browserWidth >= 768) {
+    if (browserWidth >= 480) {
       // Check if breadcrumbs and module menu have loaded.
 
       if (!shModuleMenu.isFetching) {
@@ -75,7 +75,7 @@ class Breadcrumbs extends React.Component {
       base: {
         position: 'fixed',
         top: 60,
-        left: 60,
+        left: browserWidth < 768 ? 0 : 60,
         width: '100%',
         zIndex: 10,
         padding: '0 20px',

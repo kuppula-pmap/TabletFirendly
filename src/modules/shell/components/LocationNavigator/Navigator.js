@@ -122,12 +122,12 @@ class Navigator extends React.Component {
     const { isLoading, treeView, inputValue, inputFocus } = this.state;
 
     const panelWidth = 274;
-    const responsiveRight = shUi.browserInfo.width < 768 ? shUi.browserInfo.width : panelWidth;
+    const responsiveRight = shUi.browserInfo.width < 480 ? shUi.browserInfo.width : panelWidth;
 
     let styles = {
       base: {
         maxWidth: panelWidth,
-        marginRight: shUi.browserInfo.width >= 768 ? 0 : -210,
+        marginRight: shUi.browserInfo.width >= 480 ? 0 : -210,
         transition: 'all .5s ease',
       },
 
@@ -141,7 +141,7 @@ class Navigator extends React.Component {
         maxWidth: panelWidth,
         fontSize: 14,
         // fontWeight: 100,
-        padding: shUi.browserInfo.width >= 768 ? '9px 20px 6px 40px' : '9px 20px 6px 60px',
+        padding: shUi.browserInfo.width >= 480 ? '9px 20px 6px 40px' : '9px 20px 6px 60px',
         paddingRight: shUi.isNavigatorOpen || shUi.isNavigatorPinned ? 60 : 20,
         transition: 'all .5s ease',
       },
@@ -158,7 +158,7 @@ class Navigator extends React.Component {
         position: 'fixed',
         top: 60,
         right: shUi.isNavigatorOpen || shUi.isNavigatorPinned ? 0 : -responsiveRight,
-        width: shUi.browserInfo.width < 768 ? shUi.browserInfo.width : panelWidth,
+        width: shUi.browserInfo.width < 480 ? shUi.browserInfo.width : panelWidth,
         height: shUi.browserInfo.height - 60,
         borderTopLeftRadius: 0,
         zIndex: -1,
