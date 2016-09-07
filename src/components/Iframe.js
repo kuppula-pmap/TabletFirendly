@@ -17,7 +17,7 @@ class Iframe extends React.Component {
         top: 0,
         left: 0,
         width: shUi.isNavigatorPinned && globalSettings.selectedMenuItem.IsNavigatorDisplay ? 'calc(100% - 274px)' : iframewidth,
-      //  height: shUi.browserInfo.height - 100,
+        height: shUi.browserInfo.height - 100,
         border: 0,
         transition: 'all .5s ease',
       }
